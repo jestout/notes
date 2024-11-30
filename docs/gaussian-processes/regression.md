@@ -70,24 +70,24 @@ We can very easily plot and sample this posterior, for $\sigma = 0.1$ and $\sigm
 
 === "Plot"
     ```plotly
-        {"file_path" : "./gps/code/regression/posterior_sampling.json"}
+        {"file_path" : "./gaussian-processes/code/regression/posterior_sampling.json"}
     ```
 
 === "Code"
     ```py title="Posterior Sampling"
-        --8<-- "./docs/gps/code/regression/regression.py:posterior_sampling"
+        --8<-- "./docs/gaussian-processes/code/regression/regression.py:posterior_sampling"
     ```
 
 If we instead assume that the data is noiseless, then this collapses the posterior to a much smaller region. Below, we take $\sigma_n = 0.01$; note the much smaller range of the contour plot, and much tighter grouping of the randomly sampled lines.
 
 === "Plot"
     ```plotly
-        {"file_path" : "./gps/code/regression/posterior_sampling2.json"}
+        {"file_path" : "./gaussian-processes/code/regression/posterior_sampling2.json"}
     ```
 
 === "Code"
     ```py title="Posterior Sampling"
-        --8<-- "./docs/gps/code/regression/regression.py:posterior_sampling2"
+        --8<-- "./docs/gaussian-processes/code/regression/regression.py:posterior_sampling2"
     ```
 
 What we are left with is a posterior distribution $p(\mb{w} | \mb{y}, X)$. We can convert this into a straight-up Bayesian prediction for a new point $\mb{x}_*$, given the data $X$, by writing
